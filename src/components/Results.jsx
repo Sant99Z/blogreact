@@ -95,7 +95,8 @@ export const Results = () => {
                   <td><input name="review" value={editFormData.review} onChange={handleEditFormChange} /></td>
                   <td><input name="rating" value={editFormData.rating} onChange={handleEditFormChange} /></td>
                   <td>
-                 
+                    <button onClick={handleSaveClick}>Guardar</button>
+                    <button onClick={() => setEditId(null)}>Cancelar</button>
                   </td>
                 </>
               ) : (
@@ -106,8 +107,7 @@ export const Results = () => {
                   <td>{location.review}</td>
                   <td>{location.rating}</td>
                   <td>
-                    <button onClick={() => handleEditClick(location)}>Editar</button>
-                    <button onClick={() => handleDeleteClick(location.id)}>Borrar</button>
+                 
                   </td>
                 </>
               )}
