@@ -64,9 +64,9 @@ th {
   color: white;
 }
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #f9f9f948;
-}
+} */
 
 tr:hover {
   background-color: #f9f9f948;

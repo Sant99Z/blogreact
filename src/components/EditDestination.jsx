@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 export const EditDestination = ({ destination, onUpdate, onCancel }) => {
+
+  
   const [name, setName] = useState(destination.name);
   const [location, setLocation] = useState(destination.location);
   const [review, setReview] = useState(destination.review);
