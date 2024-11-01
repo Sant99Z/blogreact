@@ -1,4 +1,3 @@
-
 import { Logout } from "./Logout";
 
 export const Header = () => {
