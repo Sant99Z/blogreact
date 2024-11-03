@@ -5,8 +5,8 @@ export const Logout = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem("user"); // Limpia los datos del usuario
-    navigate("/login"); // Redirige a la página de inicio de sesión
+    localStorage.removeItem("user"); // Asegúrate de que esto elimine el item
+    navigate("/"); // Redirige al login
   };
 
   return (

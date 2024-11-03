@@ -1,4 +1,6 @@
+// Results.jsx
 import { useEffect, useState } from "react";
+import { Logout } from "./Logout";
 
 export const Results = () => {
   const [locations, setLocations] = useState([]);
@@ -8,13 +10,14 @@ export const Results = () => {
     fetchDestinations();
   }, []);
 
+  // Función para obtener los destinos desde la API
   const fetchDestinations = async () => {
     const response = await fetch('https://6622071827fcd16fa6c8818c.mockapi.io/api/v1/blogs');
     const results = await response.json();
     setLocations(results);
   };
 
-
+  // Función para crear un nuevo destino
   const handleCreate = async (event) => {
     event.preventDefault();
     const name = event.target.elements.name.value;
@@ -38,7 +41,7 @@ export const Results = () => {
     }
   };
 
-
+  // Función para eliminar un destino
   const handleDelete = async (id) => {
     await fetch(`https://6622071827fcd16fa6c8818c.mockapi.io/api/v1/blogs/${id}`, {
       method: "DELETE"
@@ -76,7 +79,11 @@ export const Results = () => {
 
   return (
     <main className="results">
+      {/* Botón de cerrar sesión */}
+      <Logout />
+
       {editingLocation ? (
+        // Formulario de edición
         <form onSubmit={handleUpdate} className="edit-form">
           <h2>Editar Destino</h2>
           <label>Nombre</label>
@@ -91,6 +98,7 @@ export const Results = () => {
           <button type="button" onClick={() => setEditingLocation(null)}>Cancelar</button>
         </form>
       ) : (
+        // Formulario de creación
         <form onSubmit={handleCreate} className="create-form">
           <h2>Crear Destino</h2>
           <label>Nombre</label>
