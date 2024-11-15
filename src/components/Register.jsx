@@ -20,7 +20,8 @@ export const Register = () => {
       body: JSON.stringify(newUser)
     });
 
-    if (response.ok) {
+    if (response) {
+      console.log (response)
       navigate('/results'); // Redirige a la página de destinos
     } else {
       setError(true);
