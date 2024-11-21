@@ -2,10 +2,11 @@
   --beige: #f5f5dc;
   --dark: #222222;
   --light-dark: #333333;
-  --border-color: #444444;
+  --border-color: #000000;
   --accent-color: #e0c97f; /* Un beige más oscuro para acentos */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -27,9 +28,17 @@ h1, h2 {
   text-align: center;
 }
 
+img {
+  width: 38rem;
+  height: 30rem;
+  position:relative;
+  border-radius: 1%;
+  border: 3px solid black;
+}
+
 form {
-  background-color: var(--beige);
-  border: 1px solid var(--border-color);
+  background-color: #ebe9e2;
+  border: 3px solid black;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -45,17 +54,18 @@ label {
 }
 
 input, textarea, button {
-  padding: 10px;
-  border: 1px solid var(--border-color);
+  padding: 14px;
+  border: 3px solid black;
   border-radius: 5px;
   background-color: var(--light-dark);
   color: var(--beige);
   font-size: 16px;
+  width: auto;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #ccc;
+  color: #eedc8e;
 }
 
 button {
@@ -97,18 +107,76 @@ tr:hover {
   background-color: var(--light-dark);
   color: var(--beige);
 }
+.login p{
+  font-size: 1.5rem;
+  
+}
 
 .logout-button {
-  margin-top: 10px;
+  position: absolute; /* Permite posicionarlo en relación al contenedor más cercano con position: relative */
+  top: 10px; /* Espaciado desde la parte superior */
+  right: 10px; /* Espaciado desde la parte derecha */
   padding: 10px 15px;
   font-weight: bold;
   background-color: var(--dark);
   color: var(--beige);
   border: 1px solid var(--border-color);
+  border-radius: 5px;
   cursor: pointer;
 }
+
 
 .logout-button:hover {
   background-color: var(--accent-color);
   color: var(--dark);
 }
+.landing-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--beige);
+}
+
+
+.landing-content {
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  max-width: 600px;
+  width: 90%;
+}
+
+.landing-content h1 {
+  font-size: 6.5rem;
+  margin-bottom: 20px;
+  color: var(--dark);
+}
+
+.landing-content p {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+  color: var(--light-dark);
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 3rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--dark);
+  color: var(--beige);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--light-dark);
+
+
+}
+
+
+

@@ -24,7 +24,7 @@ export const CreateDestination = ({ onCreate }) => {
 
     if (response.ok) {
       const result = await response.json();
-      onCreate(result); // Llama a la función para actualizar la lista de destinos
+      onCreate(result); 
       setDestino({});
     }
   };
